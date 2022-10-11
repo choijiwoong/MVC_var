@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>MVC_Referenec_Index</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body>
+<section class="wrapper style1 align-center">
+    <div class="inner">
+        <p id="check">Hello<span th:text="${welcomeMSG}"></span></p>
+        <h2>Enter your information</h2>
+        <p>Enter your age and name and press the button</p>
+        <div class="items style1 medium onscroll-fade-in">
+            <section>
+                <span class="icon solid style2 major fa-save"></span>
+                <h3>  About   Age and Name </h3>
+                <p>----------------------</p>
+                <p><a href="/img_2">김태안, 28</a></p>
+                <p><a href="/img_1">박나영, 23</a></p>
+                <p><a href="/img_3">최지웅, 22</a></p>
+                <p>----------------------</p>
+                <ul class="actions special">
+                    <span th:if="!${isSuccess}"><li><input type="submit" name="submit" id="submit" value="Login" onclick = "location.href = '/login' "/></li></span>
+                </ul>
+</section>
+
+<script th:if="${isSuccess}==false">
+alert('no!');
+</script>
+</body>
+</html>

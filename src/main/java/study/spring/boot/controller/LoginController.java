@@ -20,7 +20,7 @@ public class LoginController {
     public String check(User user, Model model){
         if(user.getAge()==-1) {
             model.addAttribute("isSuccess", false);
-            return "index";
+            return "Index2";
         }
 
         if(loginService.signUp(user)) {
@@ -29,6 +29,6 @@ public class LoginController {
         } else{
             model.addAttribute("isSuccess", false);
         }
-        return "index";
+        return "Index2";
     }
 }
