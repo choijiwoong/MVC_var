@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<body>
+<p id="check">Hello<span th:text="${welcomeMSG}"></span></p>
+<ul>
+    <li>최지웅</li>
+    <li>박나영</li>
+</ul>
+<script th:if="${isSuccess}==false">
+alert('no!');
+</script>
+<span th:if="!${isSuccess}"><a href="/login">로그인</a></span>
+</body>
+</html>
