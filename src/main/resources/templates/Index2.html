@@ -18,17 +18,18 @@
                 <span class="icon solid style2 major fa-save"></span>
                 <h3>  About   Age and Name </h3>
                 <p>----------------------</p>
-                <p><a href="/img_2">김태안, 28</a></p>
-                <p><a href="/img_1">박나영, 23</a></p>
-                <p><a href="/img_3">최지웅, 22</a></p>
+                <p><a href ='/img_2'>김태안, 28</a></p>
+                <p><a href ="/img_3">박나영, 23</a></p>
+                <p><a href ="/img_1">최지웅, 22</a></p>
                 <p>----------------------</p>
                 <ul class="actions special">
-                    <span th:if="!${isSuccess}"><li><input type="submit" name="submit" id="submit" value="Login" onclick = "location.href = '/login' "/></li></span>
+                    <span th:if="!${isSuccess}"><li>
+                        <input type="submit" name="submit" id="submit" value="Login" onclick = "location.href = '/login' "/></li></span>
                 </ul>
 </section>
 
-<script th:if="${isSuccess}==false">
-alert('no!');
+<script th:if="${isSuccess}==false"> alert('no!');
 </script>
+        </div>
 </body>
 </html>
